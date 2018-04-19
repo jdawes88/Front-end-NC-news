@@ -1,0 +1,25 @@
+.row {
+    height: 3em;
+}
+
+.articlesList {
+    margin: 1em;
+    font-size: 0.85em;
+    color: white;
+}
+
+.rank {
+    background: red;;
+}
+
+.vote {
+    background: blue;
+}
+
+.title {
+    background: green;
+}
+
+.data {
+    background: purple;
+}

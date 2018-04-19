@@ -4,10 +4,10 @@ import ArticlesList from './ArticlesList'
 
 class Home extends Component {
     render () {
+        const {articles} = this.props
         return (
             <div className="homepage">
-                <Header />
-                <ArticlesList />
+                <ArticlesList articles={articles}/>
             </div>
         )
     }
