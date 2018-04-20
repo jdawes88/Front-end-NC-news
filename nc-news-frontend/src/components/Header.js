@@ -12,17 +12,17 @@ class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link to='/topics' className="nav-link" href="#">Topics</Link>
+                            <Link to='/topics' className="nav-link">Topics</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link to='/articles' className="nav-link" href="#">Articles</Link>
+                            <Link to='/articles' className="nav-link">Articles</Link>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a className="dropdown-item" href="#">Action</a>
-                                <a className="dropdown-item" href="#">Another action</a>
-                                <a className="dropdown-item" href="#">Something else here</a>
+                                <a className="dropdown-item">Action</a>
+                                <a className="dropdown-item">Another action</a>
+                                <a className="dropdown-item">Something else here</a>
                             </div>
                         </li>
                     </ul>
