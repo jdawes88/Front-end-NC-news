@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import Header from './Header'
 import ArticlesList from './ArticlesList'
 
 class Home extends Component {
+      
     render () {
-        const {articles} = this.props
+        const {articles, handleVoteChange} = this.props
         return (
             <div className="homepage">
-                <ArticlesList articles={articles}/>
+                <ArticlesList 
+                articles={articles}
+                handleVoteChange={handleVoteChange}
+                />
             </div>
         )
     }

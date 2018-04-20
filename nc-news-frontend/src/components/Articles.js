@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 
 class Articles extends Component {
     render () {
-        const {articles} = this.props
         return (
-
             <div className="articles">
-
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-2 vote">

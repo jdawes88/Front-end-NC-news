@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 class Header extends Component {
     render () {
+        const {users, selectCurrentUser} = this.props
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <Link to='/'className="navbar-brand">NCNews</Link>
@@ -14,15 +15,22 @@ class Header extends Component {
                         <li className="nav-item active">
                             <Link to='/topics' className="nav-link">Topics</Link>
                         </li>
-                        <li className="nav-item active">
+                        {/* <li className="nav-item active">
                             <Link to='/articles' className="nav-link">Articles</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link</a>
-                            <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a className="dropdown-item">Action</a>
-                                <a className="dropdown-item">Another action</a>
-                                <a className="dropdown-item">Something else here</a>
+                            <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Users</a>
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <ul>
+                                {users.map((user, i) => {
+                                    return (
+                                    <li onClick={() => {
+                                        selectCurrentUser(user._id)
+                                    }} key= {`${user.username}${i}`}
+                                    className="dropdown-item">{user.username}</li>
+                                    )
+                                })}   
+                                </ul>
                             </div>
                         </li>
                     </ul>
