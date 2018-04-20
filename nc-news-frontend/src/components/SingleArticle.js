@@ -60,6 +60,7 @@ class SingleArticle extends Component {
         const {comments} = this.state
         const {currentUser} = this.props
         const articleId = this.props.match.params.article_id;
+        if (!currentUser._id) alert('Please select a user to add a comment')
         axios.post(`https://nc-news-project-jd.herokuapp.com/api/articles/${articleId}/comments`, {
             body: comment,
             belongs_to: articleId,
@@ -108,7 +109,6 @@ class SingleArticle extends Component {
       }
 
       deleteComment = (id) => {
-        const articleId = this.props.match.params.article_id;
         const {comments} = this.state;
         axios.delete(`https://nc-news-project-jd.herokuapp.com/api/comments/${id}`)
         .then(() => {
@@ -116,8 +116,6 @@ class SingleArticle extends Component {
                 return comment._id !== id
             })
             return newComments
-            console.log(this.state.comments)
-            console.log(newComments)
         })
         .then(newComments => {
             this.setState({
