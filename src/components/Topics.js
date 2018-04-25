@@ -24,7 +24,7 @@ class Topics extends Component {
                 <ul className="list-inline">
                     {topics.map(topic => {
                         return (
-                            <Link to={`/topics/${topic._id}/articles`}
+                            <Link className="link" to={`/topics/${topic._id}/articles`}
                             key={topic._id}> <li value={topic._id} 
                             className="list-inline-item"
                             >

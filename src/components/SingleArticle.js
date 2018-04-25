@@ -24,15 +24,21 @@ class SingleArticle extends Component {
         const {selectedArticle, comments} = this.state
         if(!selectedArticle.body) return <div></div>
         return (
-            <div>
+            <div className="card">
+                <div className="card-header bg-danger">
                 <h3>{selectedArticle.title}</h3>
                 <p>By {selectedArticle.created_by.name}</p>
+                </div>
+                <div className="card-body">
                 <p>{selectedArticle.body}</p>
+                </div>
+                <div className="card-footer bg-danger">
                 <form className="commentForm" onSubmit={this.handleCommentSubmit} >
-                    <label htmlFor="commentInput">New comment</label>
+                    <label className="newComment" htmlFor="commentInput">New comment</label>
                     <input value={this.state.newComment} onChange={this.handleCommentChange} type="text" className="form-control"  placeholder="Please enter your comment here." required />
-                    <button type="submit" className="btnbtn-primary">Submit</button>
+                    <button id="newCommentSubmit" type="submit" className="btn btn-outline-light">Submit</button>
                 </form>
+                </div>
                 <Comments 
                 deleteComment={this.deleteComment}
                 currentUser={currentUser}

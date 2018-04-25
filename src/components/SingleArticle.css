@@ -1,1 +1,13 @@
+.newComment {
+    color: white;
+}
 
+#newCommentSubmit {
+    color: white;
+    margin: 0.2em auto;
+}
+
+input {
+    margin: 0.2em auto;
+    
+}

@@ -4,22 +4,52 @@
 
 .articlesList {
     margin: 1em;
-    font-size: 0.85em;
-    color: white;
+    font-size: 0.9em;
+    color: black;
+    background-color: #343a40;
 }
 
 .rank {
-    background: red;;
+    margin: auto 1em;
 }
 
-.vote {
-    background: blue;
+.voteToggle {
+    margin: auto 1em
 }
 
-.title {
-    background: green;
+.articleTitle {
+    margin: auto auto;
 }
 
-.data {
-    background: purple;
+.article-info {
+    margin: auto
+}
+
+.author {
+    margin: auto 2em;
+}
+
+.commentCount {
+    margin: auto 2em;
+}
+
+
+.card {
+    display:flex;
+    margin-top: 0.2em;
+}
+
+.card-header {
+    color: white;
+}
+
+.card-footer {
+    display: inline;
+    color: #dc3545;
+    flex-direction: row;
+    background-color: white
+}
+
+.fas {
+    color: white;
 }
