@@ -63,7 +63,6 @@ class SingleArticle extends Component {
     }
 
     addComment = (comment) => {
-        const {comments} = this.state
         const {currentUser} = this.props
         const articleId = this.props.match.params.article_id;
         if (!currentUser._id) alert('Please select a user to add a comment')
@@ -73,10 +72,7 @@ class SingleArticle extends Component {
             created_by: currentUser._id
         })
         .then(comment => {
-            this.setState({
-                newComment: '',
-                comments: [...comments, comment.data.comment]
-            })
+            this.getArticleComments(articleId);
         })
     }
 
